@@ -4,7 +4,7 @@ from typing import List, Optional
 
 # Definition for singly-linked list.
 class ListNode:
-    def __init__(self, val = 0, next = None):
+    def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     l1 = ListNode(1, ListNode(2, ListNode(4)))
     l2 = ListNode(1, ListNode(3, ListNode(4)))
     l3 = Solution.mergeTwoLists(l1, l2)
-    check_assertion(l3, [1,1,2,3,4,4])
+    check_assertion(l3, [1, 1, 2, 3, 4, 4])
 
     l1 = None
     l2 = None
