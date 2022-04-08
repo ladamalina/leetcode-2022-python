@@ -3,7 +3,8 @@ import math
 
 
 class Solution:
-    def isPalindrome(self, x: int) -> bool:
+    @classmethod
+    def isPalindrome(cls, x: int) -> bool:
         logging.debug(f"isPalindrome(x={x}) " + "." * 40)
         if x < 0:
             return False
@@ -36,16 +37,15 @@ class Solution:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
 
-    s = Solution()
-    assert s.isPalindrome(123454321)
-    assert s.isPalindrome(123455321) is False
-    assert s.isPalindrome(1234554321)
-    assert s.isPalindrome(1234564321) is False
-    assert s.isPalindrome(121)
-    assert s.isPalindrome(1)
-    assert s.isPalindrome(77)
-    assert s.isPalindrome(10) is False
-    assert s.isPalindrome(-121) is False
-    assert s.isPalindrome(123) is False
-    assert s.isPalindrome(120021)
-    assert s.isPalindrome(1230321)
+    assert Solution.isPalindrome(123454321)
+    assert Solution.isPalindrome(123455321) is False
+    assert Solution.isPalindrome(1234554321)
+    assert Solution.isPalindrome(1234564321) is False
+    assert Solution.isPalindrome(121)
+    assert Solution.isPalindrome(1)
+    assert Solution.isPalindrome(77)
+    assert Solution.isPalindrome(10) is False
+    assert Solution.isPalindrome(-121) is False
+    assert Solution.isPalindrome(123) is False
+    assert Solution.isPalindrome(120021)
+    assert Solution.isPalindrome(1230321)
