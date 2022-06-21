@@ -17,21 +17,25 @@ class Solution:
             nums[i] = nums[i]**2
         logging.debug(f"mid_idx = {mid_idx}")
 
-        result: List[int] = []
+        result: List[int] = [0] * len(nums)
+        result_idx = 0
         left_mid_idx = mid_idx - 1
         while left_mid_idx >= 0 and mid_idx < len(nums):
             if nums[left_mid_idx] >= nums[mid_idx]:
-                result.append(nums[mid_idx])
+                result[result_idx] = nums[mid_idx]
                 mid_idx += 1
             else:
-                result.append(nums[left_mid_idx])
+                result[result_idx] = nums[left_mid_idx]
                 left_mid_idx -= 1
+            result_idx += 1
         while left_mid_idx >= 0:
-            result.append(nums[left_mid_idx])
+            result[result_idx] = nums[left_mid_idx]
             left_mid_idx -= 1
+            result_idx += 1
         while mid_idx < len(nums):
-            result.append(nums[mid_idx])
+            result[result_idx] = nums[mid_idx]
             mid_idx += 1
+            result_idx += 1
         logging.debug(f"result = {result}")
 
         return result
