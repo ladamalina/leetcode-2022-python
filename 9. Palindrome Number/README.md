@@ -1,4 +1,4 @@
-# Leetcode / 9. Palindrome Number
+# Leetcode / 9. Palindrome Number (easy) using Python
 
 Given an integer x, return true if x is palindrome integer.
 

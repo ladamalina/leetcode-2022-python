@@ -19,10 +19,9 @@ class Solution:
         # x = 123 454 321
         if digits_num % 2:
             left_half = x // 10**(half_digits_num+1)
-            right_half = x % 10**(half_digits_num)
         else:
             left_half = x // 10**half_digits_num
-            right_half = x % 10**half_digits_num
+        right_half = x % 10**half_digits_num
         logging.debug(f"left_half = {left_half}, right_half = {right_half}")
 
         reverted_right = 0
